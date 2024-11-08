@@ -9,3 +9,4 @@ export interface AdminEntity {
     role?: "user" | "admin" | "salon";
     userList?:ObjectId[];
 }
+

@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import { adminRouter } from "@/infrastructure/routers";
 
 dotenv.config(); // Load environment variables
 
@@ -21,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors(corsOptions));
+
+app.use("/admin",adminRouter(adminDependencies))
 
 // Default route
 app.use("*", (req: Request, res: Response) => {

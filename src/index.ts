@@ -3,7 +3,7 @@
 import server from "./presentation/server";
 import { db } from "./boot/db";
 import dotenv from "dotenv";
-import { Admin } from "./infrastructure/models/adminSchema";
+import { Admin } from "./infrastructure/database/models/adminSchema";
 
 dotenv.config(); // Load environment variables
 

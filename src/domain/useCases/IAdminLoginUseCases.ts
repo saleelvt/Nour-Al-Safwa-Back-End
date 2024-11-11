@@ -2,5 +2,5 @@
 import { AdminEntity } from "../entities"
 
 export interface ILoginAdminUseCase{
-    execute(email:string,password:string):Promise<AdminEntity>
+    execute(email:string,password:string):Promise<AdminEntity|null>
 }

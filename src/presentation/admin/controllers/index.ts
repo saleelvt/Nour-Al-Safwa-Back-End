@@ -1,9 +1,8 @@
-import { IAdminDependencies } from "@/application/admin/interfaces/IAdminDependencies"
-import { loginAdminController } from "./adminLogin"
+import { IAdminDependencies } from "@/application/admin/interfaces/IAdminDependencies";
+import { loginAdminController } from "./adminLogin";
 
-
-export const adminController = (dependencies:IAdminDependencies)=>{
+export const adminController = (dependencies: IAdminDependencies) => {
     return {
-        loginAdmin:loginAdminController(dependencies)
-    }
-}
+        loginAdmin: loginAdminController(dependencies), // No change needed here.
+    };
+};

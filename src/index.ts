@@ -1,9 +1,10 @@
 // main file (e.g., index.ts)
 
-import server from "./presentation/server";
+
 import { db } from "./boot/db";
 import dotenv from "dotenv";
 import { Admin } from "./infrastructure/database/models/adminSchema";
+import app from "./presentation/server";
 
 dotenv.config(); // Load environment variables
 
@@ -43,7 +44,7 @@ export const insertAdmin = async () => {
       });
 
     // Start the server
-    server.listen(Number(process.env.PORT) || 1001, () => {
+    app.listen(Number(process.env.PORT) || 1001, () => {
       console.log(`Server started on port ${process.env.PORT || 1001}`);
     });
 

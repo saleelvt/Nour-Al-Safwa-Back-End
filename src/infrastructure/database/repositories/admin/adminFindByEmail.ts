@@ -3,7 +3,7 @@ import { Admin } from "../../models/adminSchema";
 
 export const adminFindByEmail = async (
   email: string
-): Promise<AdminEntity | null> => {
+): Promise<AdminEntity |null> => {
   try {
     console.log("🚀 ~ AdminEmail to find:", email);
 
